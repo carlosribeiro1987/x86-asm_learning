@@ -14,3 +14,4 @@ _start:
 
 	mov eax, 1			; Método de saída (sys_exit)
 	int 0x80
+	

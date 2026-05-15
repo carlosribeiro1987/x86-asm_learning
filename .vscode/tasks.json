@@ -1,0 +1,15 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Assemble and run current ASM",
+            "type": "shell",
+            "command": "nasm -f elf32 \"${file}\" -o \"${fileDirname}/${fileBasenameNoExtension}.o\" && ld -m elf_i386 \"${fileDirname}/${fileBasenameNoExtension}.o\" -o \"${fileDirname}/${fileBasenameNoExtension}\" && \"${fileDirname}/${fileBasenameNoExtension}\"",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}
